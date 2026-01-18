@@ -15,19 +15,16 @@ No experiments are performed on physical quantum hardware.
 ## Repository Structure
 
 AQIR-ADS/
-│
-├── notebooks/
-│ └── aqir_ads_main.ipynb
-│
-├── results/
-│ ├── *.pdf
-│ └── *.png
-│
-├── circuits/
-│ ├── *.png
-│ └── *.pdf
-│
-└── README.md
+- notebooks/
+  - aqir_ads_main.ipynb
+- results/
+  - *.pdf
+  - *.png
+- circuits/
+  - *.png
+  - *.pdf
+- README.md
+
 
 
 ---
@@ -110,9 +107,10 @@ Input datasets are **not included** in this repository due to their large size.
 The notebook assumes the following local directory structure:
 
 input_datasets/
-├── braintumor/
-├── mrifnl/
-└── sar/
+- braintumor/
+- mrifnl/
+- sar/
+
 
 ### Public Dataset Sources
 

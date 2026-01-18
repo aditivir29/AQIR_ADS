@@ -10,7 +10,7 @@ AQIR-ADS: A Noise-Aware Adaptive Quantum Image Representation with Reduced Circu
 All quantum image representations and circuits provided in this repository are
 purely theoretical and simulation-based.
 No experiments are conducted on physical quantum hardware.
-"""
+```
 Repository Structure
 AQIR-ADS/
 ├── input_datasets/
@@ -38,7 +38,7 @@ AQIR-ADS/
 │   ├── Table2_Qualitative_Factors.csv
 │   └── Table_Ablation_AQIR_ADS.csv
 └── README.md
-"""
+```
 notebooks/aqir_ads_main.ipynb
 
 This is the main and only executable notebook used in this work.
@@ -172,12 +172,12 @@ Important Note:
 Due to their large storage size, the input datasets used in this study are not included in this GitHub repository. As a result, the input_datasets/ directory is not provided in the repository snapshot.
 
 The notebook assumes the following local directory structure when executed:
-
+```
 input_datasets/
 ├── braintumor/
 ├── mrifnl/
 └── sar/
-
+```
 Users who wish to reproduce the experiments should manually download the datasets from the public sources listed below and place them in the corresponding directories.
 
 Public Dataset Sources

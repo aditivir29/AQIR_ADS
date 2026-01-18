@@ -13,14 +13,8 @@ No experiments are conducted on physical quantum hardware.
 
 Repository Structure
 AQIR-ADS/
-├── input_datasets/
-│   ├── braintumor/
-│   ├── mrifnl/
-│   └── sar/
-│
 ├── notebooks/
 │   ├── aqir_ads_main.ipynb
-│   │
 │   ├── circuits/
 │   │   ├── FRQI_Circuit.pdf
 │   │   ├── EFRQI_Circuit.pdf
@@ -33,16 +27,14 @@ AQIR-ADS/
 │   │   ├── MCQI_Circuit.pdf
 │   │   ├── QUALPI_Circuit.pdf
 │   │   └── AQIR-ADS_Circuit.pdf
-│   │
 │   ├── results/
 │   │   ├── *.pdf
 │   │   └── *.png
-│   │
 │   ├── Table1_Average_Performance.csv
 │   ├── Table2_Qualitative_Factors.csv
 │   └── Table_Ablation_AQIR_ADS.csv
-│
 └── README.md
+
 
 notebooks/aqir_ads_main.ipynb
 

@@ -1,11 +1,11 @@
-AQIR-ADS
+### AQIR-ADS
 
-Adaptive Quantum Image Representation with Adaptive Depth Suppression
+### Adaptive Quantum Image Representation with Adaptive Depth Suppression
 
 This repository contains the complete simulation code, analytically constructed
 quantum circuits, and experimental results for the research work:
 
-AQIR-ADS: A Noise-Aware Adaptive Quantum Image Representation with Reduced Circuit Complexity
+### AQIR-ADS: A Noise-Aware Adaptive Quantum Image Representation with Reduced Circuit Complexity
 
 All quantum image representations and circuits provided in this repository are
 purely theoretical and simulation-based.
@@ -39,7 +39,7 @@ AQIR-ADS/
 │   └── Table_Ablation_AQIR_ADS.csv
 └── README.md
 ```
-notebooks/aqir_ads_main.ipynb
+### notebooks/aqir_ads_main.ipynb
 
 This is the main and only executable notebook used in this work.
 
@@ -102,7 +102,7 @@ Ablation studies for AQIR-ADS variants
 
 Automatic generation of Springer-ready figures and tables
 
-All simulations are performed using classical computation.
+### All simulations are performed using classical computation.
 Quantum circuits are analytically constructed and simulated using theoretical
 noise models.
 
@@ -119,7 +119,7 @@ Circuits represent analytical constructions, not hardware-executable layouts
 
 No circuit in this repository is executed on real quantum hardware.
 
-notebooks/results/
+### notebooks/results/
 
 This directory contains all final experimental outputs, including:
 
@@ -154,7 +154,7 @@ correspond directly to the results reported in the manuscript.
 
 Tables (CSV Files)
 
-All quantitative result tables are stored directly in the notebooks/ directory:
+### All quantitative result tables are stored directly in the notebooks/ directory:
 
 Table1_Average_Performance.csv
 Average performance metrics across all QIR techniques.
@@ -166,9 +166,9 @@ Table_Ablation_AQIR_ADS.csv
 Ablation study results evaluating the impact of adaptive encoding components
 in AQIR-ADS.
 
-Input Datasets (Not Included in Repository)
+### Input Datasets (Not Included in Repository)
 
-Important Note:
+### Important Note:
 Due to their large storage size, the input datasets used in this study are not included in this GitHub repository. As a result, the input_datasets/ directory is not provided in the repository snapshot.
 
 The notebook assumes the following local directory structure when executed:
@@ -180,7 +180,7 @@ input_datasets/
 ```
 Users who wish to reproduce the experiments should manually download the datasets from the public sources listed below and place them in the corresponding directories.
 
-Public Dataset Sources
+### Public Dataset Sources
 
 Brain Tumor Dataset (Figshare)
 https://figshare.com/articles/dataset/brain_tumor_dataset/1512427

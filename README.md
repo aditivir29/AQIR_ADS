@@ -2,16 +2,17 @@ AQIR-ADS
 
 Adaptive Quantum Image Representation with Adaptive Depth Suppression
 
-This repository contains the simulation code, analytically constructed quantum circuits, and experimental results associated with the research work:
+This repository contains the complete simulation code, analytically constructed
+quantum circuits, and experimental results for the research work:
 
 AQIR-ADS: A Noise-Aware Adaptive Quantum Image Representation with Reduced Circuit Complexity
 
-All quantum image representations and circuits in this repository are theoretical and simulation-based.
-No experiments are performed on physical quantum hardware.
+All quantum image representations and circuits provided in this repository are
+purely theoretical and simulation-based.
+No experiments are conducted on physical quantum hardware.
 
 Repository Structure
 AQIR-ADS/
-│
 ├── input_datasets/
 │   ├── braintumor/
 │   ├── mrifnl/
@@ -37,28 +38,20 @@ AQIR-ADS/
 │   │   ├── *.pdf
 │   │   └── *.png
 │   │
-│   ├── figures/
-│   │
 │   ├── Table1_Average_Performance.csv
 │   ├── Table2_Qualitative_Factors.csv
 │   └── Table_Ablation_AQIR_ADS.csv
 │
 └── README.md
 
-Note:
-All generated outputs—including tables, figures, and circuit diagrams—are
-intentionally stored under notebooks/ to keep execution, results, and
-analysis tightly coupled for reproducibility and reviewer verification.
-
-notebooks/
-aqir_ads_main.ipynb
+notebooks/aqir_ads_main.ipynb
 
 This is the main and only executable notebook used in this work.
 
-It implements the complete simulation pipeline for quantum image
-representation and evaluation, including:
+It implements the complete quantum image processing simulation pipeline,
+including:
 
-Loading and preprocessing grayscale images
+Loading and preprocessing grayscale image datasets
 
 Analytical modeling of quantum image representation (QIR) techniques:
 
@@ -92,7 +85,7 @@ Gate count
 
 Circuit depth
 
-Noise-aware image reconstruction under NISQ-like assumptions
+Noise-aware image reconstruction under NISQ-like constraints
 
 Quantitative evaluation metrics:
 
@@ -104,7 +97,7 @@ Gate fidelity
 
 Information loss
 
-Composite performance indicators:
+Composite performance measures:
 
 Reconstruction Quality Score (RQS)
 
@@ -112,15 +105,16 @@ Quantum Resource Efficiency (QRE)
 
 Ablation studies for AQIR-ADS variants
 
-Generation of Springer-ready figures, tables, and circuit visualizations
+Automatic generation of Springer-ready figures and tables
 
-All computations are carried out using classical simulation.
-Quantum circuits are constructed analytically and evaluated using theoretical noise models.
+All simulations are performed using classical computation.
+Quantum circuits are analytically constructed and simulated using theoretical
+noise models.
 
 notebooks/circuits/
 
 This directory contains theoretical quantum circuit diagrams for all evaluated
-quantum image representation techniques, including AQIR-ADS.
+quantum image representation techniques.
 
 Circuits are generated using Qiskit for visualization purposes only
 
@@ -132,7 +126,7 @@ No circuit in this repository is executed on real quantum hardware.
 
 notebooks/results/
 
-This directory contains all final experimental figures, including:
+This directory contains all final experimental outputs, including:
 
 Performance comparison plots:
 
@@ -158,36 +152,39 @@ Reconstruction Quality Score (RQS)
 
 Quantum Resource Efficiency (QRE)
 
-Visual reconstruction comparisons for MRI and SAR images
+Visual reconstruction comparisons for MRI and SAR datasets
 
 All figures are generated at publication-quality resolution (300–600 DPI) and
-correspond directly to results reported in the manuscript.
+correspond directly to the results reported in the manuscript.
 
-Tables (CSV)
+Tables (CSV Files)
 
 All quantitative result tables are stored directly in the notebooks/ directory:
 
 Table1_Average_Performance.csv
-Average PSNR, SSIM, qubit count, gate count, circuit depth, encoding time, and fidelity per QIR technique.
+Average performance metrics across all QIR techniques.
 
 Table2_Qualitative_Factors.csv
-Composite qualitative metrics:
-
-Reconstruction Quality Score (RQS)
-
-Quantum Resource Efficiency (QRE)
+Composite qualitative indicators (RQS and QRE).
 
 Table_Ablation_AQIR_ADS.csv
-Ablation study results evaluating the impact of gradient weighting, rotation strategy, and circuit depth on AQIR-ADS performance.
+Ablation study results evaluating the impact of adaptive encoding components
+in AQIR-ADS.
 
-Input Datasets
+Input Datasets (Not Included in Repository)
 
-The input_datasets/ directory contains the datasets used for simulation:
+Important Note:
+Due to their large storage size, the input datasets used in this study are not included in this GitHub repository. As a result, the input_datasets/ directory is not provided in the repository snapshot.
+
+The notebook assumes the following local directory structure when executed:
 
 input_datasets/
 ├── braintumor/
 ├── mrifnl/
 └── sar/
+
+
+Users who wish to reproduce the experiments should manually download the datasets from the public sources listed below and place them in the corresponding directories.
 
 Public Dataset Sources
 
@@ -200,19 +197,4 @@ http://nist.mni.mcgill.ca/?page_id=672
 Synthetic Aperture Radar (SAR) Dataset (ICEYE)
 https://www.iceye.com/resources/datasets
 
-For experimental feasibility and consistency, only a subset of images (up to 200 per dataset) is used during simulation, as described in the manuscript.
-
-Simulation and Reproducibility Notes
-
-All results are obtained via classical simulation
-
-Circuit depth, gate count, and noise effects are analytically modeled
-
-Noise is injected using depth-dependent stochastic perturbations
-
-No physical quantum processor is used
-
-No claims are made regarding hardware-level execution
-
-This repository is provided to support reproducibility, transparency, and
-reviewer verification of the reported results.
+For experimental feasibility and consistency with the manuscript, only a subset of images (up to 200 per dataset) is used during simulation.

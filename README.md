@@ -15,11 +15,11 @@ Repository Structure
 Repository Structure
 
 AQIR-ADS/
-│── input_datasets/
+├── input_datasets/
 │   ├── braintumor/
 │   ├── mrifnl/
 │   └── sar/
-│── notebooks/
+├── notebooks/
 │   ├── aqir_ads_main.ipynb
 │   ├── circuits/
 │   │   ├── FRQI_Circuit.pdf
@@ -40,6 +40,7 @@ AQIR-ADS/
 │   ├── Table2_Qualitative_Factors.csv
 │   └── Table_Ablation_AQIR_ADS.csv
 └── README.md
+
 
 
 notebooks/aqir_ads_main.ipynb

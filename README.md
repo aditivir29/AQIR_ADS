@@ -12,8 +12,6 @@ purely theoretical and simulation-based.
 No experiments are conducted on physical quantum hardware.
 
 Repository Structure
-Repository Structure
-
 AQIR-ADS/
 ├── input_datasets/
 │   ├── braintumor/
@@ -40,8 +38,6 @@ AQIR-ADS/
 │   ├── Table2_Qualitative_Factors.csv
 │   └── Table_Ablation_AQIR_ADS.csv
 └── README.md
-
-
 
 notebooks/aqir_ads_main.ipynb
 

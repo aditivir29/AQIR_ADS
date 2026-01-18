@@ -1,251 +1,144 @@
-# AQIR-ADS: Adaptive Quantum Image Representation with Angle-Dependent Sampling
+# AQIR-ADS  
+Adaptive Quantum Image Representation with Adaptive Depth Suppression
 
-This repository contains the complete experimental pipeline for **Quantum Image Representation (QIR)** techniques, with a focus on the proposed **AQIR-ADS** method. The framework provides a **comparative, simulation-based evaluation** of multiple classical QIR models using image reconstruction quality, quantum resource metrics, qualitative scoring, and circuit-level visualization.
+This repository contains the simulation code, analytical circuit constructions,
+and experimental results for the research work:
 
-The implementation is designed for **reproducible academic experimentation** and aligns with evaluation standards used in quantum image processing literature.
+**AQIR-ADS: A Noise-Aware Adaptive Quantum Image Representation with Reduced Circuit Complexity**
 
-
-
-##  Implemented QIR Techniques
-
-The following quantum image representation models are implemented and evaluated:
-
-- FRQI  
-- EFRQI  
-- NEQR  
-- IQIR  
-- 2D-QSNA  
-- NASS  
-- GQIR  
-- QRMW  
-- MCQI  
-- QUALPI  
-- **AQIR-ADS (Proposed)**
-
-AQIR-ADS introduces **gradient-aware angle modulation** and **adaptive depth control** to improve reconstruction quality while reducing quantum resource usage.
+All quantum image representations and circuits in this repository are
+**theoretical and simulation-based**.  
+No experiments are performed on physical quantum hardware.
 
 ---
 
-## Core Contributions
+## Repository Structure
 
-- Unified simulation pipeline for **multiple QIR techniques**
-- Adaptive reconstruction model (AQIR-ADS)
-- Quantitative evaluation using:
-  - PSNR
-  - SSIM
-  - Information Loss
-  - Gate Fidelity
-- Composite qualitative scoring:
-  - Reconstruction Quality Score (RQS)
-  - Quantum Resource Efficiency (QRE)
-- Visual comparison across **medical (MRI, brain tumor)** and **remote sensing (SAR)** datasets
-- Qiskit-based **quantum circuit visualization**
+AQIR-ADS/
+│
+├── notebooks/
+│ └── aqir_ads_main.ipynb
+│
+├── results/
+│ ├── *.pdf
+│ └── *.png
+│
+├── circuits/
+│ ├── *.png
+│ └── *.pdf
+│
+└── README.md
+
 
 ---
 
-## Dataset Structure
+## notebooks/
 
+### aqir_ads_main.ipynb
 
-Datasets are expected to be stored locally as:
-dataset/
-├── brain_tumor/
-│ └── original/
-│ ├── image1.jpg
-│ ├── image2.png
-│ └── ...
-├── mri/
-│ └── original/
-│ ├── image1.mat
-│ └── ...
-└── sar/
-└── original/
-├── image1.tif
-├── image2.png
-└── ...
+This is the **main and only executable notebook** used in this work.
 
-Supported formats:
-- `.jpg`, `.png`, `.jpeg`
-- `.tif`, `.tiff`
-- `.mat` (MATLAB arrays)
+It implements the complete **simulation pipeline** for quantum image
+representation and evaluation, including:
 
----
-
-##  Pipeline Overview
-
-### 1. Image Loading
-- Automatic grayscale conversion
-- Robust `.mat` and SAR image handling
-- Safe normalization and resizing
-
-### 2. Quantum Encoding Simulation
-- Each QIR technique is mapped to:
-  - Qubit count
-  - Gate count
+- Loading and preprocessing grayscale images
+- Analytical modeling of multiple QIR techniques:
+  - FRQI  
+  - EFRQI  
+  - NEQR  
+  - IQIR  
+  - 2D-QSNA  
+  - NASS  
+  - GQIR  
+  - QRMW  
+  - MCQI  
+  - QUALPI  
+  - **Proposed AQIR-ADS**
+- Analytical estimation of:
+  - Qubit count  
+  - Gate count  
   - Circuit depth
-- Encoding time is measured analytically
+- Noise-aware image reconstruction under NISQ-like assumptions
+- Evaluation metrics:
+  - PSNR  
+  - SSIM  
+  - Gate fidelity  
+  - Information loss
+- Composite performance measures:
+  - Reconstruction Quality Score (RQS)  
+  - Quantum Resource Efficiency (QRE)
+- Ablation studies for AQIR-ADS variants
+- Generation of Springer-ready figures and tables (PDF and PNG)
 
-### 3. Reconstruction Simulation
-- Existing methods: noise modeled from gate count and depth
-- AQIR-ADS:
-  - Sobel gradient extraction
-  - Gradient-weighted angle encoding
-  - Adaptive depth-based noise modeling
-
-### 4. Metric Computation
-- PSNR
-- SSIM (custom implementation)
-- Gate fidelity (exponential depth decay)
-- Information loss
-
-### 5. Result Aggregation
-- CSV output for:
-  - Per-image results
-  - Technique-wise averages
-  - Qualitative factor tables
+All simulations are performed using **classical computation**.
+Quantum circuits are **constructed theoretically** and **simulated using local
+statevector and analytical noise models**.
 
 ---
 
-##  Generated Result Tables
+## results/
 
-### Table 1: Average Performance Metrics
-Saved as:
+This folder contains **all final outputs** generated from the notebook, including:
 
-Table1_Average_Performance.csv
+- Quantitative result tables
+- Performance comparison plots (PSNR, SSIM, gate count, depth, fidelity)
+- Composite metric plots (RQS, QRE)
+- Springer-formatted visual comparisons (PDF and PNG)
 
-
-Includes:
-- Qubits
-- Gates
-- Circuit Depth
-- Encoding Time
-- PSNR
-- SSIM
-- Gate Fidelity
-- Information Loss
+All figures are produced at publication-quality resolution
+(300–600 DPI) and correspond directly to results reported in the manuscript.
 
 ---
 
-### Table 2: Qualitative Factors
-Saved as:
+## circuits/
 
+This folder contains **theoretical quantum circuit diagrams** for all evaluated
+quantum image representation techniques, including AQIR-ADS.
 
-Table2_Qualitative_Factors.csv
+- Circuits are generated using Qiskit for visualization purposes only
+- PNG and vector PDF formats are provided
+- Circuits represent **analytical constructions**, not executable hardware layouts
 
-
-Computed using min–max normalization:
-- **Reconstruction Quality Score**
-- **Quantum Resource Efficiency**
-
----
-
-## Visual Comparisons
-
-Visual reconstructions are generated for:
-- Brain tumor images
-- MRI images
-- SAR images
-
-Comparisons include:
-- Original image
-- Best existing method (2D-QSNA)
-- Proposed AQIR-ADS
-
-All visualizations are resolution-consistent with experimental settings.
+**No circuit in this repository is executed on real quantum hardware.**
 
 ---
 
-##  Gradient-Aware Angle Mapping (AQIR-ADS)
+## Input Datasets (Not Included)
 
-AQIR-ADS uses:
-- Sobel-based gradient magnitude
-- Gradient-normalized angle range
-- Angle modulation proportional to structural complexity
+Input datasets are **not included** in this repository due to their large size.
 
-This mechanism preserves high-frequency regions while suppressing unnecessary noise in smooth regions.
+The notebook assumes the following local directory structure:
 
----
+input_datasets/
+├── braintumor/
+├── mrifnl/
+└── sar/
 
-##  Quantum Circuit Visualization
+### Public Dataset Sources
 
-Quantum circuits are generated using **Qiskit** and saved as `.png` files.
+- Brain Tumor Dataset (Figshare):  
+  https://figshare.com/articles/dataset/brain_tumor_dataset/1512427
 
-Each circuit reflects:
-- Actual qubit count
-- Logical gate structure
-- Encoding pattern per QIR technique
+- MRI-FNL Dataset (McGill / MNI):  
+  http://nist.mni.mcgill.ca/?page_id=672
 
-Output directory:
+- Synthetic Aperture Radar (SAR) Dataset (ICEYE):  
+  https://www.iceye.com/resources/datasets
 
-
-QIR_CIRCUITS/
-├── FRQI_Circuit.png
-├── 2D-QSNA_Circuit.png
-├── AQIR-ADS_Circuit.png
-└── ...
-
+For experimental consistency, only a **subset of images (up to 200 per dataset)**
+is used during simulation, as described in the paper.
 
 ---
 
-##  Graphical Analysis
+## Simulation and Reproducibility Notes
 
-The repository generates plots for:
-- Qubit requirements
-- Gate count
-- Circuit depth
-- Encoding time
-- PSNR
-- SSIM
-- Gate fidelity
-- Information loss
-- Qualitative score comparison
-- Quality vs. resource trade-off scatter plot
+- All results are obtained via **classical simulation**
+- Circuit depth, gate count, and noise effects are **analytically modeled**
+- Noise is injected using depth-dependent stochastic perturbations
+- No physical quantum processor is used
+- No claims are made regarding hardware-level execution
+
+This repository is provided to support **reproducibility, transparency, and
+reviewer verification** of the reported results.
 
 ---
-
-##  Dependencies
-
-- Python ≥ 3.9
-- OpenCV
-- NumPy
-- Pandas
-- Matplotlib
-- SciPy
-- scikit-image
-- Qiskit
-- Rasterio (for SAR images)
-
----
-
-##  How to Run
-
-1. Place datasets in the required folder structure
-2. Run the main pipeline script to generate CSV results
-3. Run visualization scripts for:
-   - Image comparisons
-   - Graphs
-   - Quantum circuits
-4. Use generated tables directly for paper figures
-
----
-
-##  Notes
-
-- This is a **simulation-based comparative study**
-- No physical quantum hardware is assumed
-- All noise and fidelity models are analytical
-- The framework is extensible to additional QIR methods
-
----
-
-##  Intended Use
-
-- Academic research
-- Journal and conference submissions
-- Quantum image representation benchmarking
-- Teaching and experimentation
-
----
-
-##  Author
-
-Developed as part of a structured research study in **Quantum Image Processing**, with emphasis on **adaptive encoding and resource-aware design**.

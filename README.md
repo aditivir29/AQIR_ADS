@@ -10,7 +10,7 @@ AQIR-ADS: A Noise-Aware Adaptive Quantum Image Representation with Reduced Circu
 All quantum image representations and circuits provided in this repository are
 purely theoretical and simulation-based.
 No experiments are conducted on physical quantum hardware.
-
+"""
 Repository Structure
 AQIR-ADS/
 ├── input_datasets/
@@ -38,7 +38,7 @@ AQIR-ADS/
 │   ├── Table2_Qualitative_Factors.csv
 │   └── Table_Ablation_AQIR_ADS.csv
 └── README.md
-
+"""
 notebooks/aqir_ads_main.ipynb
 
 This is the main and only executable notebook used in this work.

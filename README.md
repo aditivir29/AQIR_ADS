@@ -12,8 +12,14 @@ purely theoretical and simulation-based.
 No experiments are conducted on physical quantum hardware.
 
 Repository Structure
+Repository Structure
+
 AQIR-ADS/
-├── notebooks/
+│── input_datasets/
+│   ├── braintumor/
+│   ├── mrifnl/
+│   └── sar/
+│── notebooks/
 │   ├── aqir_ads_main.ipynb
 │   ├── circuits/
 │   │   ├── FRQI_Circuit.pdf
@@ -174,7 +180,6 @@ input_datasets/
 ├── braintumor/
 ├── mrifnl/
 └── sar/
-
 
 Users who wish to reproduce the experiments should manually download the datasets from the public sources listed below and place them in the corresponding directories.
 
